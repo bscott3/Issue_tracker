@@ -1,0 +1,22 @@
+{
+  "name": "IssueTracker",
+  "authors": [
+    "Bryan Scott <bryanbscott2000@gmail.com>"
+  ],
+  "description": "Tracking projects and issues",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "random-development.appspot.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0"
+  }
+}
