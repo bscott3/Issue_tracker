@@ -2,10 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title></title>
+    <title>Issue Tracker</title>
+
+    <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 
     <script type="text/javascript" src="/static/bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="/static/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="/static/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/js/app.js"></script>
     <script type="text/javascript" src="/static/js/controllers.js"></script>
 
@@ -13,7 +16,23 @@
 
 <body ng-app="app">
 <!-- if you want a toolbar that is on every page do it here -->
-
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+</nav>
     <ui-view>
         <!-- HTML Partials will show up here-->
     </ui-view>

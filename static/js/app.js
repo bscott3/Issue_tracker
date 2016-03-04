@@ -12,7 +12,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     .state('app', {
     url: "/app",
     abstract: true,
-    templateUrl: "",
+    templateUrl: "static/views/nav.html",
     controller: 'LoginCtrl'
     })
     //This is a dynamic Angular route it creates a angular route for all html partials in the static/partials dir
