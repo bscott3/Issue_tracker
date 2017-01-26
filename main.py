@@ -20,6 +20,7 @@ import json
 import os
 import utils
 from google.appengine.ext.webapp import template
+from models import Project
 
 
 class MainHandler(utils.BaseHandler):
@@ -28,6 +29,21 @@ class MainHandler(utils.BaseHandler):
         path = os.path.join(os.path.dirname(__file__), 'templates/index.html')
         self.response.out.write(template.render(path, template_values))
 
+
+class ProjectHandler(utils.APIRequest):
+    def get(self):
+        projects = Project.query().fetch()
+        self.response.write(json.dumps(self.to_json(projects)))
+
+    def post(self):
+        p = Project()
+        p.owner = self.request.get('owner').upper()
+        p.description = self.request.get("description")
+        p.folder = self.request.get("folder")
+        p.name = self.request.get("name")
+        p.status = self.request.get("status")
+        p.put()
+        self.response.write(json.dumps(self.to_json(p)))
 with open('key.json') as f:
      json_data = json.load(f)
 config = {}
@@ -35,5 +51,6 @@ config['webapp2_extras.sessions'] = {
     'secret_key': json_data['secret_key'],
 }
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/projects', ProjectHandler)
 ], debug=True, config=config)
