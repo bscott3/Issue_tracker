@@ -1,3 +1,7 @@
 <md-content ng-controller="HomeCtrl">
+<h2>Projects</h2>
 
+    <md-list>
+        <md-list-item ng-click="goToProjectDetail(p.datastore_id)" ng-repeat="p in projects">{{p.name}}</md-list-item>
+    </md-list>
 </md-content>

@@ -23,11 +23,20 @@ appContrl.controller('LoginCtrl', function($scope, $timeout, $mdSidenav, $log){
     };
   })
 
- .controller('HomeCtrl', function ($scope, $log, ProjectService) {
+ .controller('HomeCtrl', function ($scope, $log, ProjectService, $state) {
         $scope.projects = [];
         ProjectService.fetchAllOwnerProjects().then(function (resp) {
+            console.log(resp);
             $scope.projects = resp.data;
         },function (err) {
             $log.error(err)
-        })
-  });
+        });
+
+        $scope.goToProjectDetail = function (datastore_id){
+            $state.go('app.projectDetail', {id:datastore_id})
+        };
+
+  }).controller('ProjectDetailCtrl', function ($scope, $log, ProjectService, $stateParams) {
+        console.log($stateParams.id)
+
+  });;

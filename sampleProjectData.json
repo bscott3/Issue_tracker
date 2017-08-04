@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Test Project",
+    "description" : "This is automatically generated project used stritcly for testing purposes",
+    "folder":"",
+    "owner": "",
+    "status": "A"
+  }, {
+    "name": "Test Project 2",
+    "description" : "This is automatically generated project used strictly for testing purposes",
+    "folder":"",
+    "owner": "",
+    "status": "IP"
+  }, {
+    "name": "Test Project 3",
+    "description" : "This is automatically generated project used strictly for testing purposes",
+    "folder":"",
+    "owner": "",
+    "status": "F"
+  }
+]

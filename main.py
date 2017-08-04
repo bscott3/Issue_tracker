@@ -25,6 +25,18 @@ from models import Project
 
 class MainHandler(utils.BaseHandler):
     def get(self):
+        # if utils.isDev():
+        #     with open('sampleProjectData.json') as f:
+        #         project_d = json.load(f)
+        #     for p in project_d:
+        #         np = Project()
+        #         np.name = p['name']
+        #         np.description = p['description']
+        #         np.status = p['status']
+        #         np.owner = p['owner']
+        #         np.folder = p['folder']
+        #         np.put()
+
         template_values = {}
         path = os.path.join(os.path.dirname(__file__), 'templates/index.html')
         self.response.out.write(template.render(path, template_values))

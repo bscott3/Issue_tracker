@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base href="/">
     <title>Issue Tracker</title>
 
     <link rel="stylesheet" href="static/bower_components/angular-material/angular-material.min.css"/>
@@ -20,44 +21,8 @@
 
 
 <body ng-app="app">
-<div ng-controller="LoginCtrl">
-<md-toolbar class="md-hue-2">
-      <div class="md-toolbar-tools">
-        <md-button ng-click="toggleRight()" class="md-icon-button" aria-label="Settings">
-          <i class="material-icons">menu</i>
-        </md-button>
-        <h2>
-          <span>Projects</span>
-        </h2>
-        <span flex></span>
-        <!--<md-button class="md-icon-button" aria-label="Favorite">-->
-          <!--<i class="material-icons">face</i>-->
-        <!--</md-button>-->
-        <!--<md-button class="md-icon-button" aria-label="More">-->
-          <!--<md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>-->
-        <!--</md-button>-->
-      </div>
-    </md-toolbar>
-    </div>
-<md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
+<!--<div ng-controller="LoginCtrl">-->
 
-      <md-toolbar class="md-theme-light">
-        <h1 class="md-toolbar-tools">Sidenav Right</h1>
-      </md-toolbar>
-      <md-content ng-controller="RightCtrl" layout-padding>
-        <form>
-          <md-input-container>
-            <label for="testInput">Test input</label>
-            <input type="text" id="testInput"
-                   ng-model="data" md-autofocus>
-          </md-input-container>
-        </form>
-        <md-button ng-click="close()" class="md-primary">
-          Close Sidenav Right
-        </md-button>
-      </md-content>
-
-    </md-sidenav>
 
 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
     <ui-view>

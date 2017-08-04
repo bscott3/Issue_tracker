@@ -6,6 +6,7 @@ class Project(ndb.Model):
     description = ndb.TextProperty()
     folder = ndb.StringProperty()
     owner = ndb.StringProperty()
+    # possible values A(Archived) IP (In Progress) F (Finished)
     status = ndb.StringProperty()
     created_on = ndb.DateTimeProperty(auto_now_add=True)
     last_updated = ndb.DateTimeProperty(auto_now=True)
